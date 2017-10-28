@@ -1,0 +1,8 @@
+'.source.js, .source.js-semantic':
+  'document.ready - $(function(){})':
+    'prefix': 'ready'
+    'body': """
+    \$(function() {
+      \$1
+    });
+    """

@@ -1,0 +1,7 @@
+'.source.js, .source.js-semantic':
+  'console.log()':
+    'prefix': 'console.log'
+    'body': 'console.log($1)'
+  'console.debug()':
+    'prefix': 'console.debug'
+    'body': 'console.debug($1)'

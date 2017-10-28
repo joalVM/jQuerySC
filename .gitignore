@@ -1,0 +1,23 @@
+# Dependency directory
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+# Logs
+logs
+*.log
+
+pids
+*.pid
+*.seed
+
+lib-cov
+
+coverage
+
+.grunt
+
+.lock-wscript
+
+build/Release
