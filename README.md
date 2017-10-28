@@ -1,0 +1,2 @@
+# jQuerySC
+JQuery Snippet Collections
