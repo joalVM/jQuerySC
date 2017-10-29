@@ -1,5 +1,7 @@
 # jQuery Snippets Collection for [Atom](http://atom.io)
 
+> Actualmente se encuentra en desarrollo y se suben nuevos snippets semanalmente. :D 
+
 ## Snippets
 
 ### 1. ready
