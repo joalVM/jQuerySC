@@ -1,0 +1,42 @@
+'.source.js, .source.js-semantic':
+  '$.get(url, data, cb);':
+    'prefix': 'get'
+    'body': """
+    \$.get(${1:'/path/to/file'}${2:, ${3:objRequest}${4:, function(${5:response, textStatus, jqXHR}) {
+      ${6:/*Callback success*/}
+    \\}}});$7
+    """
+    'description': 'Ajax get with inner success callback'
+  '$.get(url, data).done(cb);':
+    'prefix': 'getd'
+    'body': """
+    \$.get(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:response, textStatus, jqXHR}) {
+      ${5:/*Callback success*/}
+    });$6
+    """
+    'description': 'Ajax get with done(success) callback'
+  '$.get(url, data).done(cb).fail(cb);':
+    'prefix': 'getdf'
+    'body': """
+    \$.get(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:response, textStatus, jqXHR}) {
+      ${5:/*Callback success event*/}
+    }).fail(function(${6:jqXHR, textStatus, errorThrown}) {
+      ${7:/*Callback error event*/}
+    });$8
+    """
+    'description': 'Ajax get with done(success) and fail(error) callback'
+  '$.get(url, data).done(cb).fail(cb).always(cb);':
+    'prefix': 'getdfa'
+    'body': """
+    \$.get(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:response, textStatus, jqXHR}) {
+      ${5:/*Callback success event*/}
+    }).fail(function(${6:jqXHR, textStatus, errorThrown}) {
+      ${7:/*Callback error event*/}
+    }).always(function(${8:response, textStatus, jqXHR}) {
+      ${9:/*Callback error event*/}
+    });$10
+    """
+    'description': 'Ajax get with done(success), fail(error) and always(complete) callback'

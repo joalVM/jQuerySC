@@ -1,0 +1,42 @@
+'.source.js, .source.js-semantic':
+  '$.getJSON(url, data, cb);':
+    'prefix': 'getJSON'
+    'body': """
+    \$.getJSON(${1:'/path/to/file'}${2:, ${3:objRequest}${4:, function(${5:json, textStatus, jqXHR}) {
+      ${6:/*Callback success*/}
+    \\}}});$7
+    """
+    'description': 'Ajax getJSON with inner success callback'
+  '$.getJSON(url, data).done(cb);':
+    'prefix': 'getJSONd'
+    'body': """
+    \$.getJSON(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:json, textStatus, jqXHR}) {
+      ${5:/*Callback success*/}
+    });$6
+    """
+    'description': 'Ajax getJSON with done(success) callback'
+  '$.getJSON(url, data).done(cb).fail(cb);':
+    'prefix': 'getJSONdf'
+    'body': """
+    \$.getJSON(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:json, textStatus, jqXHR}) {
+      ${5:/*Callback success event*/}
+    }).fail(function(${6:jqXHR, textStatus, errorThrown}) {
+      ${7:/*Callback error event*/}
+    });$8
+    """
+    'description': 'Ajax getJSON with done(success) and fail(error) callback'
+  '$.getJSON(url, data).done(cb).fail(cb).always(cb);':
+    'prefix': 'getJSONdfa'
+    'body': """
+    \$.getJSON(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:json, textStatus, jqXHR}) {
+      ${5:/*Callback success event*/}
+    }).fail(function(${6:jqXHR, textStatus, errorThrown}) {
+      ${7:/*Callback error event*/}
+    }).always(function(${8:json, textStatus, jqXHR}) {
+      ${9:/*Callback error event*/}
+    });$10
+    """
+    'description': 'Ajax getJSON with done(success), fail(error) and always(complete) callback'

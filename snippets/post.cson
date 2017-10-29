@@ -1,0 +1,42 @@
+'.source.js, .source.js-semantic':
+  '$.post(url, data, cb);':
+    'prefix': 'post'
+    'body': """
+    \$.post(${1:'/path/to/file'}${2:, ${3:objRequest}${4:, function(${5:response, textStatus, jqXHR}) {
+      ${6:/*Callback success*/}
+    \\}}});$7
+    """
+    'description': 'Ajax post with inner success callback'
+  '$.post(url, data).done(cb);':
+    'prefix': 'postd'
+    'body': """
+    \$.post(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:response, textStatus, jqXHR}) {
+      ${5:/*Callback success*/}
+    });$6
+    """
+    'description': 'Ajax post with done(success) callback'
+  '$.post(url, data).done(cb).fail(cb);':
+    'prefix': 'postdf'
+    'body': """
+    \$.post(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:response, textStatus, jqXHR}) {
+      ${5:/*Callback success event*/}
+    }).fail(function(${6:jqXHR, textStatus, errorThrown}) {
+      ${7:/*Callback error event*/}
+    });$8
+    """
+    'description': 'Ajax post with done(success) and fail(error) callback'
+  '$.post(url, data).done(cb).fail(cb).always(cb);':
+    'prefix': 'postdfa'
+    'body': """
+    \$.post(${1:'/path/to/file'}${2:, ${3:objRequest}})
+      .done(function(${4:response, textStatus, jqXHR}) {
+      ${5:/*Callback success event*/}
+    }).fail(function(${6:jqXHR, textStatus, errorThrown}) {
+      ${7:/*Callback error event*/}
+    }).always(function(${8:response, textStatus, jqXHR}) {
+      ${9:/*Callback error event*/}
+    });$10
+    """
+    'description': 'Ajax post with done(success), fail(error) and always(complete) callback'
