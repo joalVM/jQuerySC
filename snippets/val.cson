@@ -1,0 +1,17 @@
+'.source.js, .source.js-semantic':
+  'val();':
+    'prefix': 'val'
+    'body': 'val();$1',
+    'description': 'Get the current value of the first element in the set of matched elements or set the value of every matched element.'
+  'val(text/array);':
+    'prefix': 'valm'
+    'body': 'val(${1:text/array});$2',
+    'description': 'Set the value of each element in the set of matched elements'
+  'val(callback);':
+    'prefix': 'valfn'
+    'body': """
+      val(function(${1:index, value}) {
+        return value;
+      });$2
+    """
+    'description': 'Set the value of each element in the set of matched elements passing a function returning the value to set. this is the current element. Receives the index position of the element in the set and the old value as arguments.'

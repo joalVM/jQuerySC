@@ -1,0 +1,5 @@
+'.source.js, .source.js-semantic':
+  'off(events, selector, handler);':
+    'prefix': 'off'
+    'body':'off(${1:\'${2:eventNames}\'${3:, \'${4:selector}\'}${5:, ${6:handler}}});$7'
+    "description":"Remove an event handler."

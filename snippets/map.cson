@@ -1,0 +1,17 @@
+'.source.js, .source.js-semantic':
+  '$.map(array/object, callback);':
+    'prefix': 'map'
+    'body': """
+      \$.map(${1:array/object}, function(${2:index}${3:, ${4:value}}) {
+        return ${5:something};
+      });$6
+    """
+    'description': 'Translate all items in an array or object to new array of items.'
+  '$(selector).map(callback);':
+    'prefix': 'maps'
+    'body': """
+      map(function(${1:index}${2:, ${3:element}}) {
+        return ${4:something};
+      });$5
+    """
+    'description': 'Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.'

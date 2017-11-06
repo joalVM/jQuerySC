@@ -1,0 +1,9 @@
+'.source.js, .source.js-semantic':
+  'on(events, selector, data, handler);':
+    'prefix': 'on'
+    'body': """
+      on('${1:eventNames}'${2:, \'${3:selector}\'${4:, ${5:data}}}${6:, ${7:function(${8:event}) {
+        ${8:event}${9:.preventDefault();}$10
+      \\}}});$11
+    """
+    "description":"Attach an event handler function for one or more events to the selected elements."

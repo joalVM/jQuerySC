@@ -21,3 +21,4 @@ coverage
 .lock-wscript
 
 build/Release
+test

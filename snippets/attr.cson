@@ -18,3 +18,7 @@
       ${3:return ${4: oldAttributeValue}};
     });$5"""
     'description': 'A function returning the value to set. this is the current element. Receives the index position of the element in the set and the old attribute value as arguments.'
+  'removeAttr(attributeName);':
+    'prefix': 'removeAttr'
+    'body': 'removeAttr(\'${1:attributeName}\');$2'
+    'description': 'Remove an attribute from each element in the set of matched elements.'
