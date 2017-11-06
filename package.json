@@ -1,7 +1,7 @@
 {
   "name": "jQuerySC",
   "main": "./lib/jQuerySC",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "jQuery Snippets Collection for Atom",
   "repository": {
     "type": "git",
