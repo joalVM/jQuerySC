@@ -1,10 +1,10 @@
 '.source.js, .source.js-semantic':
   'val();':
     'prefix': 'val'
-    'body': 'val();$1',
+    'body': 'val($1);$2',
     'description': 'Get the current value of the first element in the set of matched elements or set the value of every matched element.'
   'val(text/array);':
-    'prefix': 'valm'
+    'prefix': 'vals'
     'body': 'val(${1:text/array});$2',
     'description': 'Set the value of each element in the set of matched elements'
   'val(callback);':
