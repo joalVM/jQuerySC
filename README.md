@@ -4,22 +4,22 @@
 
 ## Micelania
 
-|#|sufijos|descripción|
-|-|-|-|
-|1|s|Set|
-|2|g|Get|
-|3|si|Set Inline|
-|4|so|Set with Object|
-|5|fn|Method with function|
-|6|jq|JQuery Utilities|
-|7|d|only done callback|
-|8|df|done and fail callback|
-|9|dfa|done, fail and always callback|
+| # | sufijos | descripción |
+|:---:|:-----:|:------------|
+| 1 | s | Set |
+| 2 | g | Get |
+| 3 | si | Set Inline |
+| 4 | so | Set with Object |
+| 5 | fn | Method with function |
+| 6 | jq | JQuery Utilities |
+| 7 | d | only done callback |
+| 8 | df | done and fail callback |
+| 9 | dfa | done, fail and always callback |
 
 ## Table de contenido
 
-|#|Metodo|Prefijo|
-|-|-|-|
+| # | Metodo | Prefijo |
+|:---:|:-----|:--------|
 | 1 | ready | ready |
 | 2 | attr | attr, attrsi, attrso, attrfn |
 | 3 | removeAttr | removeAttr |
@@ -37,10 +37,12 @@
 | 15 | on | on |
 | 16 | off | off |
 | 17 | one | one |
+| 18 | addClass | addClass, addClassfn |
+| 19 | removeClass | removeClass, removeClassfn|
 
 ## Snippets
 
-### 1. ready
+#### 1. ready
 
 ```javascript
 ready   > $(function() {
@@ -48,7 +50,7 @@ ready   > $(function() {
           });
 ```
 
-### 2. attr
+#### 2. attr
 
 ```javascript
 attr   >  attr('attributeName');
@@ -59,13 +61,13 @@ attrfn >  attr('attributeName', function(index, oldAttributeValue) {
           });
 ```
 
-### 3. removeAttr
+#### 3. removeAttr
 
 ```javascript
 removeAttr > removeAttr('attributeName');
 ```
 
-### 4. prop
+#### 4. prop
 
 ```javascript
 prop   >  prop('propertyName');
@@ -76,13 +78,13 @@ propfn >  prop('propertyName', function(index, oldPropertyValue) {
           });
 ```
 
-### 5. removeProp
+#### 5. removeProp
 
 ```javascript
 removeProp   >  removeProp('propertyName');
 ```
 
-### 6. data
+#### 6. data
 
 ```javascript
 data    > data();
@@ -91,13 +93,13 @@ datasi  > data('name', 'value');
 dataso  > data({name: value});
 ```
 
-### 7. removeData
+#### 7. removeData
 
 ```javascript
 removeData  > removeData('name');
 ```
 
-### 8. each
+#### 8. each
 
 ```javascript
 each    > each(function(index, element) {
@@ -108,7 +110,7 @@ eachjq  > $.each(array/object, function(index, element) {
           });
 ```
 
-### 9. map
+#### 9. map
 
 ```javascript
 map    >  map(function(index, element) {
@@ -119,7 +121,7 @@ mapjq  >  $.map(array/object, function(index, value) {
           });
 ```
 
-### 10. val
+#### 10. val
 
 ```javascript
 val   > val();
@@ -129,13 +131,13 @@ valfn > val(function(index, value) {
         });
 ```
 
-#### 11. extend
+##### 11. extend
 
 ```javascript
 extend > $.extend(true, target, object);
 ```
 
-### 12. get ajax
+#### 12. get ajax
 
 ```javascript
 get    > $.get('path/to/file', objRequest, function(response, textStatus, jqXHR) {
@@ -164,7 +166,7 @@ getdfa  > $.get('path/to/file', objRequest)
           });
 ```
 
-### 13. getJSON ajax
+#### 13. getJSON ajax
 
 ```javascript
 getJSON     > $.getJSON('path/to/file', objRequest, function(response, textStatus, jqXHR) {
@@ -193,7 +195,7 @@ getJSONdfa  > $.getJSON('path/to/file', objRequest)
               });
 ```
 
-### 14. post ajax
+#### 14. post ajax
 
 ```javascript
 post    > $.post('path/to/file', objRequest, function(response, textStatus, jqXHR) {
@@ -222,7 +224,7 @@ postdfa  > $.post('path/to/file', objRequest)
           });
 ```
 
-### 15. on
+#### 15. on
 
 ```javascript
 on >  on('eventNames', 'selector', data, function(event) {
@@ -230,16 +232,34 @@ on >  on('eventNames', 'selector', data, function(event) {
       });
 ```
 
-### 16. off
+#### 16. off
 
 ```javascript
 off >  off('eventNames', 'selector', handler);
 ```
 
-### 16. one
+#### 17. one
 
 ```javascript
 off > one('eventNames', 'selector', data, function(event) {
         event.preventDefault();
       });
+```
+
+#### 18. addClass
+
+```javascript
+addClass    > addClass('className');
+addClassfn  > addClass(function(index, currentClassName) {
+                return something;
+              });
+```
+
+#### 19. removeClass
+
+```javascript
+removeClass    > removeClass('className');
+removeClassfn  > removeClass(function(index, ClassName) {
+                return something;
+              });
 ```
