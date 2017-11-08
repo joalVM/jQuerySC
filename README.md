@@ -8,13 +8,14 @@
 |:---:|:-----:|:------------|
 | 1 | s | Set |
 | 2 | g | Get |
-| 3 | si | Set Inline |
-| 4 | so | Set with Object |
-| 5 | fn | Method with function |
-| 6 | jq | JQuery Utilities |
-| 7 | d | only done callback |
-| 8 | df | done and fail callback |
-| 9 | dfa | done, fail and always callback |
+| 3 | ga | Get using an array |
+| 4 | si | Set Inline |
+| 5 | so | Set with Object |
+| 6 | fn | Method with function |
+| 7 | jq | JQuery Utilities |
+| 8 | d | only done callback |
+| 9 | df | done and fail callback |
+| 10 | dfa | done, fail and always callback |
 
 ## Table de contenido
 
@@ -38,7 +39,8 @@
 | 16 | off | off |
 | 17 | one | one |
 | 18 | addClass | addClass, addClassfn |
-| 19 | removeClass | removeClass, removeClassfn|
+| 19 | removeClass | removeClass, removeClassfn |
+| 20 | css | css, cssg, cssga, cssfn, csssi, cssso |
 
 ## Snippets
 
@@ -258,8 +260,21 @@ addClassfn  > addClass(function(index, currentClassName) {
 #### 19. removeClass
 
 ```javascript
-removeClass    > removeClass('className');
-removeClassfn  > removeClass(function(index, ClassName) {
-                return something;
-              });
+removeClass    >  removeClass('className');
+removeClassfn  >  removeClass(function(index, ClassName) {
+                    return something;
+                  });
+```
+
+#### 20. css
+
+```javascript
+css     >   css();
+cssg    >   css('propertyName');
+cssga   >   css(['propertyName1']);
+csssi   >   css('propertyName', 'value');
+cssso   >   css({propertyName: value});
+cssfn   >   css('propertyName', function(index, value) {
+              return something;
+            });
 ```
