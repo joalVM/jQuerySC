@@ -1,0 +1,19 @@
+'.source.js, .source.js-semantic':
+  'is(selector);':
+    'prefix': 'is'
+    'body': 'is(\'${1:selector}\')${2:;}'
+    'description': """
+      Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
+      [selector]: A string containing a selector expression to match elements against.
+    """
+  'is(callback);':
+    'prefix': 'isfn'
+    'body': """
+      is(function(${1:${2:index}, ${3:element}}) {
+        ${4:return something;}
+      });$5
+    """
+    'description': """
+      Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
+      [callback]: A function used as a test for every element in the set. It accepts two arguments, index, which is the element's index in the jQuery collection, and element, which is the DOM element. Within the function, this refers to the current DOM element.
+    """

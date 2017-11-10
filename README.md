@@ -41,6 +41,8 @@
 | 18 | addClass | addClass, addClassfn |
 | 19 | removeClass | removeClass, removeClassfn |
 | 20 | css | css, cssg, cssga, cssfn, csssi, cssso |
+| 21 | is | is, isfn |
+| 22 | Utilities | isarray, isemptyobject, isfunction, isnumeric, isplainobject, inarray, contains |
 
 ## Snippets
 
@@ -277,4 +279,25 @@ cssso   >   css({propertyName: value});
 cssfn   >   css('propertyName', function(index, value) {
               return something;
             });
+```
+
+#### 21. is
+
+```javascript
+is    > is('selector');
+isfn  > is(function(index, element) {
+          return something;
+        });
+```
+
+#### 22. Utilities
+
+```javascript
+isarray         > $.isArray(obj);
+isemptyobject   > $.isEmptyObject(object);
+isfunction      > $.isFunction(obj);
+isnumeric       > $.isNumeric(value);
+isplainobject   > $.isPlainObject(object);
+inarray         > $.inArray(value, array, fromIndex);
+contains        > $.contains(container, contained);
 ```

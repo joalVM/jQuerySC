@@ -1,0 +1,53 @@
+'.source.js, .source.js-semantic':
+  '$.isArray(obj);':
+    'prefix': 'isarray'
+    'body': '$.isArray(${1:obj})${2:;}'
+    'description': """
+      Determine whether the argument is an array.
+      [obj]: Object to test whether or not it is an array.
+    """
+  '$.isEmptyObject(object);':
+    'prefix': 'isemptyobject'
+    'body': '$.isEmptyObject(${1:object})${2:;}'
+    'description': """
+      Check to see if an object is empty (contains no enumerable properties).
+      [object]: The object that will be checked to see if it's empty.
+    """
+  '$.isFunction(obj);':
+    'prefix': 'isfunction'
+    'body': '$.isFunction(${1:obj})${2:;}'
+    'description': """
+      Determine if the argument passed is a JavaScript function object.
+      [obj]: Object to test whether or not it is a function.
+    """
+  '$.isNumeric(value);':
+    'prefix': 'isnumeric'
+    'body': '$.isNumeric(${1:value})${2:;}'
+    'description': """
+      Determines whether its argument represents a JavaScript number.
+      [value]: The value to be tested.
+    """
+  '$.isPlainObject(object);':
+    'prefix': 'isplainobject'
+    'body': '$.isPlainObject(${1:object})${2:;}'
+    'description': """
+      Check to see if an object is a plain object (created using "{}" or "new Object").
+      [object]: The object that will be checked to see if it's a plain object.
+    """
+  '$.inArray(value, array[, fromIndex]);':
+    'prefix': 'inarray'
+    'body': '$.inArray(${1:${2:value}, ${3:array}${4:, ${5:fromIndex}}});$6'
+    'description': """
+      Search for a specified value within an array and return its index (or -1 if not found).
+      [value]: The value to search for.
+      [array]: An array through which to search.
+      [fromIndex]: (Opcional) The index of the array at which to begin the search. The default is 0, which will search the whole array.
+    """
+  '$.contains(container, contained);':
+    'prefix': 'contains'
+    'body': '$.contains(${1:container}, ${2:contained})${3:;}'
+    'description': """
+      Check to see if a DOM element is a descendant of another DOM element.
+      [container]: The DOM element that may contain the other element.
+      [contained]: The DOM element that may be contained by (a descendant of) the other element.
+    """
