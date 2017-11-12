@@ -1,53 +1,131 @@
 '.source.js, .source.js-semantic':
   '$.isArray(obj);':
-    'prefix': 'isarray'
+    'prefix': 'isArray'
     'body': '$.isArray(${1:obj})${2:;}'
     'description': """
       Determine whether the argument is an array.
-      [obj]: Object to test whether or not it is an array.
+      [ obj ]: Object to test whether or not it is an array.
     """
   '$.isEmptyObject(object);':
-    'prefix': 'isemptyobject'
+    'prefix': 'isEmptyObject'
     'body': '$.isEmptyObject(${1:object})${2:;}'
     'description': """
       Check to see if an object is empty (contains no enumerable properties).
-      [object]: The object that will be checked to see if it's empty.
+      [ object ]: The object that will be checked to see if it's empty.
     """
   '$.isFunction(obj);':
-    'prefix': 'isfunction'
+    'prefix': 'isFunction'
     'body': '$.isFunction(${1:obj})${2:;}'
     'description': """
       Determine if the argument passed is a JavaScript function object.
-      [obj]: Object to test whether or not it is a function.
+      [ obj ]: Object to test whether or not it is a function.
     """
   '$.isNumeric(value);':
-    'prefix': 'isnumeric'
+    'prefix': 'isNumeric'
     'body': '$.isNumeric(${1:value})${2:;}'
     'description': """
       Determines whether its argument represents a JavaScript number.
-      [value]: The value to be tested.
+      [ value ]: The value to be tested.
     """
   '$.isPlainObject(object);':
-    'prefix': 'isplainobject'
+    'prefix': 'isPlainObject'
     'body': '$.isPlainObject(${1:object})${2:;}'
     'description': """
       Check to see if an object is a plain object (created using "{}" or "new Object").
-      [object]: The object that will be checked to see if it's a plain object.
+      [ object ]: The object that will be checked to see if it's a plain object.
+    """
+  '$.makeArray(obj);':
+    'prefix': 'makeArray'
+    'body': '$.makeArray(${1:obj});$2'
+    'description': """
+      Convert an array-like object into a true JavaScript array.
+      [ obj ]: Any object to turn into a native Array.
+    """
+  '$.merge(first, second);':
+    'prefix': 'merge'
+    'body': '$.merge(${1:first}, ${2:second});$3'
+    'description': """
+      Merge the contents of two arrays together into the first array.
+      [ first ]: The first array-like object to merge, the elements of second added.
+      [ second ]: The second array-like object to merge into the first, unaltered.
+    """
+  '$.grep(array, callback [, invert]);':
+    'prefix': 'grep'
+    'body': """
+      $.grep(${1:array}, function(${2:elementOfArray}${3:, ${4:indexInArray}}) {
+        ${5:return something;}
+      }${6:, ${7:invert}});$8"""
+    'description': """
+      Finds the elements of an array which satisfy a filter function. The original array is not affected.
+      [ array ]: The array-like object to search through.
+      [ callback ]: The function to process each item against. The first argument to the function is the item, and the second argument is the index. The function should return a Boolean value.  this will be the global window object.
+      [ invert ]: (Optional) If "invert" is false, or not provided, then the function returns an array consisting of all elements for which "callback" returns true. If "invert" is true, then the function returns an array consisting of all elements for which "callback" returns false.
     """
   '$.inArray(value, array[, fromIndex]);':
-    'prefix': 'inarray'
+    'prefix': 'inArray'
     'body': '$.inArray(${1:${2:value}, ${3:array}${4:, ${5:fromIndex}}});$6'
     'description': """
       Search for a specified value within an array and return its index (or -1 if not found).
-      [value]: The value to search for.
-      [array]: An array through which to search.
-      [fromIndex]: (Opcional) The index of the array at which to begin the search. The default is 0, which will search the whole array.
+      [ value ]: The value to search for.
+      [ array ]: An array through which to search.
+      [ fromIndex ]: (Opcional) The index of the array at which to begin the search. The default is 0, which will search the whole array.
     """
   '$.contains(container, contained);':
     'prefix': 'contains'
     'body': '$.contains(${1:container}, ${2:contained})${3:;}'
     'description': """
       Check to see if a DOM element is a descendant of another DOM element.
-      [container]: The DOM element that may contain the other element.
-      [contained]: The DOM element that may be contained by (a descendant of) the other element.
+      [ container ]: The DOM element that may contain the other element.
+      [ contained ]: The DOM element that may be contained by (a descendant of) the other element.
+    """
+  '$.noop()':
+    'prefix': 'noop'
+    'body': '$.noop()$1'
+    'description': """
+      An empty function.
+      This method does not accept any arguments.
+    """
+  '$.now()':
+    'prefix': 'now'
+    'body': '$.now()${1:;}'
+    'description': """
+      Return a number representing the current time.
+      The \$.now() method is a shorthand for the number returned by the expression (new Date).getTime().
+    """
+  '$.parseHTML(data[, context] [, keepScripts]);':
+    'prefix': 'parseHTML'
+    'body': '$.parseHTML(${1:data}${2:, ${3:context}${4:, ${5:keepScripts}}});$6'
+    'description': """
+      Parses a string into an array of DOM nodes.
+      [ data ]: HTML string to be parsed.
+      [ context ]: (Optional) Document element to serve as the context in which the HTML fragment will be created.
+      [ keepScripts ]: (Optional) A Boolean indicating whether to include scripts passed in the HTML string.
+    """
+  '$.parseJSON(json);':
+    'prefix': 'parseJSON'
+    'body': '$.parseJSON(${1:json});$2'
+    'description': """
+      Takes a well-formed JSON string and returns the resulting JavaScript value.
+      [ json ]: The JSON string to parse.
+    """
+  '$.parseXML(data);':
+    'prefix': 'parseXML'
+    'body': '$.parseXML(${1:data});$2'
+    'description': """
+      Parses a string into an XML document.
+      [ data ]: a well-formed XML string to be parsed
+    """
+  '$.trim(str);':
+    'prefix': 'trim'
+    'body': '$.trim(${1:str})${2:;}'
+    'description': """
+      Remove the whitespace from the beginning and end of a string.
+      [ str ]: The string to trim.
+    """
+  '$.type(obj);':
+    'prefix': 'type'
+    'body': '$.type(${1:obj})${2:;}'
+    'description': """
+      Determine the internal JavaScript [[Class]] of an object.
+      [ obj ]: Object to get the internal JavaScript [[Class]] of.
     """

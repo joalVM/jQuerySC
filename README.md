@@ -42,9 +42,9 @@
 | 19 | removeClass | removeClass, removeClassfn |
 | 20 | css | css, cssg, cssga, cssfn, csssi, cssso |
 | 21 | is | is, isfn |
-| 22 | Utilities | isarray, isemptyobject, isfunction, isnumeric, isplainobject, inarray, contains |
+| 22 | Utilities | isarray, isemptyobject, isfunction, isnumeric, isplainobject, makearray, merge, greep, inarray, contains, noop, now, parsehtml, parsejson, parsexml, trim, type |
 
-## Snippets
+### Snippets
 
 #### 1. ready
 
@@ -245,7 +245,7 @@ off >  off('eventNames', 'selector', handler);
 #### 17. one
 
 ```javascript
-off > one('eventNames', 'selector', data, function(event) {
+one > one('eventNames', 'selector', data, function(event) {
         event.preventDefault();
       });
 ```
@@ -298,6 +298,18 @@ isemptyobject   > $.isEmptyObject(object);
 isfunction      > $.isFunction(obj);
 isnumeric       > $.isNumeric(value);
 isplainobject   > $.isPlainObject(object);
+makearray       > $.makeArray(obj);
+merge           > $.merge(first, second);
+greep           > $.grep(array, function(elementOfArray, indexInArray) {
+                    return something;
+                  }, invert);
 inarray         > $.inArray(value, array, fromIndex);
 contains        > $.contains(container, contained);
+noop            > $.noop()
+now             > $.now();
+parsehtml       > $.parseHTML(data, context, keepScripts);
+parsejson       > $.parseJSON(json);
+parsexml        > $.parseXML(data);
+trim            > $.trim(str);
+type            > $.type(obj);
 ```
